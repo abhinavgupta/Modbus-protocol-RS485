@@ -1,0 +1,20 @@
+1 - Open either sketch on your Arduino IDE:
+	- mbslave_pde_example.pde is programed in C. The complete modbus implementation is inside the sketch. Nothing else is needed.
+	- mbslave_lib_example.pde uses the ModbusSlave library. The library is included in this directory as the directory ModbusSlave. See Arduino 		  library reference on the internet to see how to install the library. 
+	
+2 - upload your selected sketch into your arduino.
+
+3 - on your linux console, change to the directory where you unpacked mbslave_examples.tar.gz file, and type:
+make
+this will create the Modbus master file mbm. 
+
+4 - Run the executable:
+./mbm
+
+You will see the led of your arduino turn off (if it was on), then turn on
+for 2 seconds, then blink quite fast for 3 secs, and then blink slower for
+6 seconds.
+
+You can of course use other Modbus master implementations for your test.
+
+Other things to be noticed is the PDE Sketches folder. This is version 1.0 implementation of MODBUS protocol. The c file in the folder can be used with certain modifications as a universal file that can run on virutally any microcontroller.
